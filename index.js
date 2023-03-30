@@ -81,6 +81,18 @@ app.put('/carros/:id', (req,res) =>{
 });
 
 
+app.delete('/carros/:id', (req,res) =>{
+    const id=req.params.id ?? 0;
+    let sql ="Delete From Carros Where id = ?";
+    con.query(sql,[id], (err,result) =>{
+        if(err){
+            throw err;
+        } else {
+            res.status(200).json({});
+        }
+    });
+});
+
 app.listen(port,() => {
     console.log(`Example app listening on port ${port}`);
 });
