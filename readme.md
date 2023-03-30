@@ -1,4 +1,5 @@
-npm install express
+npm install express 
+
 npm install mysql
 
 ``
@@ -11,3 +12,5 @@ npm install mysql
 git clone url
 git add .
 git commit -m 'Mensaje'
+git push
+
