@@ -11,6 +11,7 @@ docker run --link mariadb:db -p 8080:8080 adminer
 
 ``
 
+usuario del profe: jorgempitc
 
 
   git config --global user.email "you@example.com"
