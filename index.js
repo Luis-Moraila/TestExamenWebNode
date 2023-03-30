@@ -65,6 +65,21 @@ app.post('/carros', (req,res)=>{
 
 
 
+app.put('/carros/:id', (req,res) =>{
+    let id=req.params.id ?? 0;
+    const marca=req.body.marca;
+    const nombre=req.body.nombre;
+
+    let sql="Update Carros set marca = ?, nombre = ? where id = ?";
+    con.query(sql,[marca,nombre,id],(err,result)=>{
+        if(err){
+            throw err;
+        } else {
+            res.status(200).json({});
+        }
+    });
+});
+
 
 app.listen(port,() => {
     console.log(`Example app listening on port ${port}`);
